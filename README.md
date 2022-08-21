@@ -5,14 +5,14 @@ The artifacts for "Keeping Secrets: Multi-objective Genetic Improvement for Dete
 
 The pdf of the paper can be accessed at here.
 To cite this work, please use the citation below.<br>
-```@INPROCEEDINGS{mesecan2022Keeping, <br>
-&nbsp; author={Mesecan, Ibrahim and Blackwell, Daniel and Clark, David and Cohen, Myra B and Petke, Justyna},<br>
-&nbsp; booktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE22)},<br>
-&nbsp; title={Keeping Secrets: Multi-objective Genetic Improvement for Detecting and Reducing Information Leakage},<br>
-&nbsp; year={2022},<br>
-&nbsp; pages={739-750},<br>
-&nbsp; doi={10.1145/3551349.3556947}<br>
-}```
+``` @INPROCEEDINGS{mesecan2022Keeping,
+author={Mesecan, Ibrahim and Blackwell, Daniel and Clark, David and Cohen, Myra B and Petke, Justyna},
+booktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE22)},
+title={Keeping Secrets: Multi-objective Genetic Improvement for Detecting and Reducing Information Leakage},
+year={2022},
+pages={739-750},
+doi={10.1145/3551349.3556947}
+} ```
 
 
 ## Test Subjects
