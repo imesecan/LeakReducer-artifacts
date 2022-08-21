@@ -3,7 +3,7 @@ Mesecan, Ibrahim; Blackwell, Daniel; Clark, David; Cohen, Myra B; Petke, Justyna
 
 The artifacts for "Keeping Secrets: Multi-objective Genetic Improvement for Detecting and Reducing Information Leakage", published at 37th IEEE/ACM International Conference on Automated Software Engineering (ASE22), October 2022 Oakland Center, Michigan, United States.
 
-# Citation
+## Citation
 The pdf of the paper can be accessed at here.
 To cite this work, please use the citation below.
 
