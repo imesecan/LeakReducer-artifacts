@@ -30,27 +30,28 @@ dst="${Src}/subjects/${sub}"
 cd ${Src}/${Test}/${Sub}
 algos=$(ls -d *)
 
-echo "$Src $dst"
-echo "Algos: $algos"
+# echo "$Src $dst"
+# echo "Algos: $algos"
 
     k=0;
     for algo in $algos;
     do
         src="${Src}/${Test}/${Sub}/${algo}"
         cd $src
-        pwd
+        # pwd
         folders=$(ls -d *)
-        echo $folders;
+        # echo $folders;
         cd ${cdir}/$dst
         for folder in $folders
         do
             for input_file in ${src}/${folder}/*${FNAME}.${EXT}
             do
-                printf "$folder $input_file "
+                file_name=$(basename "$input_file")
+                printf "$Sub $algo $folder $file_name "
                 res=$(cp ${input_file} ${SUB_FLD}${FNAME}.${EXT} 2>&1 );
                 err=$(echo $res | grep "cannot stat")
                 if [[ -z $err ]]; then
-                    output=$(./build.sh | grep "^Leak");
+                    output=$(./build.sh | grep "^QIF:");
                     echo $output
                 else
                     echo "";
@@ -63,3 +64,4 @@ echo "Algos: $algos"
 rm -f driver ${SUB_FLD}${FNAME}.o  ${SUB_FLD}*.gc*  *.gc* ;
 cp ${SUB_FLD}${FNAME}.${EXT}.orig ${SUB_FLD}${FNAME}.${EXT}
 cd $Src
+echo ""
