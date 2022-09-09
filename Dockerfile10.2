@@ -1,0 +1,14 @@
+FROM ubuntu:20.04
+
+RUN apt update && apt upgrade -y
+RUN apt install -y unzip wget grep build-essential perl python3 gcc-7 make
+RUN cd ~/ && wget https://ftpmirror.gnu.org/gcc/gcc-10.2.0/gcc-10.2.0.tar.xz && tar xf gcc-10.2.0.tar.xz
+WORKDIR /root/gcc-10.2.0
+RUN ./contrib/download_prerequisites && ./configure --prefix=/usr/local/gcc-10.2.0 --enable-languages=c,c++ --disable-multilib --program-suffix=-10.2  && make && make install 
+
+RUN ln /usr/bin/gcc-10.2  /usr/bin/gcc
+RUN ln /usr/bin/g++-10.2  /usr/bin/g++
+
+COPY ./  /app/LeakReducer
+WORKDIR /app/LeakReducer
+CMD ./evaluate-all.sh

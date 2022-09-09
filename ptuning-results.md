@@ -1,27 +1,34 @@
-Top 10 configurations from the parameter tuning
-tests. Table below shows 3 parameters: 
-1) Population Size, 
-2) Mutation Rate, 
-3) Crossover Rate,
+# Parameter Tuning Test Results
+Table below lists the configurations
+whose ```p-value``` is less than ```0.05```.
+Wilcoxon rank sum test was used to measure 
+statistical evidence of difference in means. 
+It shows information for 3 parameters: 
+1) Population Size 
+2) Mutation Rate
+3) Crossover Rate
 
-and the p-value and Mean Fitness for 
-the configurations. 
+together with the p-value and Mean Fitness.
 The table is ordered according to the mean 
-fitness of configurations. Student's t-test 
-was used to measure statistical evidence of 
-difference in means. There are 6 configurations 
-with ```p-value < 0.05```, only the 3 are shown
-are listed below.
+fitness of configurations. Based on the results, 
+we chose the configuration whose ```p-value < 0.05```
+while having the smallest median fitness
+and the largest population.
 
 Pop. Size | Mut. Rate | Cross. Rate |  p-value | Mean Fitness
 ----------|-----------|-------------|----------|-------------
-100 | 1.00 | 0.50 | **0.03** | 0.29 
-40 | 1.00 | 0.75 | **0.02** | 0.29 
-40 | 1.00 | 1.00 | 0.05 | 0.29 
-80 | 1.00 | 0.75 | 0.06 | 0.29 
-20 | 1.00 | 1.00 | 0.07 | 0.30 
-80 | 1.00 | 0.50 | 0.09 | 0.30 
-60 | 0.75 | 1.00 | 0.07 | 0.30 
-20 | 1.00 | 0.75 | **0.04** | 0.30 
-40 | 1.00 | 0.25 | 0.11 | 0.30 
-80 | 0.75 | 0.50 | 0.12 | 0.30 
+40	| 1 	| 1	 	| 0.031   | **0.293**
+**100**	| 1 	| 0.5	| 0.042   | **0.293**
+40	| 1 	| 0.75 	| 0.028   | 0.294
+80	| 1 	| 0.75 	| 0.049   | 0.294
+80	| 1 	| 0.5	| 0.019   | 0.297
+20	| 0.25	| 0.25	| 0.007	  | 0.346
+20	| 0.25	| 0.75	| 0.036   | 0.347
+100	| 0.5	| 0.75	| 0.047   | 0.348
+60	| 0.25	| 0.75	| 0.022   | 0.348
+100	| 0.25	| 0.5	| 0.014   | 0.349
+80	| 0.25	| 0.5	| 0.033   | 0.349
+20	| 0.25	| 1  	| 0.025   | 0.350
+100	| 0.25	| 0.75	| 0.022	  | 0.351
+80	| 0.25	| 0.75	| 0.031   | 0.353
+80	| 0.25	| 0.25	| 0.008	  | 0.362
